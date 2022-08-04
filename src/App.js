@@ -44,6 +44,7 @@ class App extends Component {
   render () {
     console.log('render');
 
+    //allows you to remove this 
     const {monsters, searchField} = this.state;
     const {onSearchChange} = this;
 
