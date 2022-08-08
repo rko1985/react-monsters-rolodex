@@ -39,7 +39,7 @@ class App extends Component {
   }
 
   render () {
-    
+    console.log('render from appJS');
 
     //allows you to remove this 
     const {monsters, searchField} = this.state;
