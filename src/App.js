@@ -13,7 +13,7 @@ const App = () => {
   const [monsters, setMonsters] = useState([]);
   const [filteredMonsters, setFilterMonsters] = useState(monsters);
   
-
+  console.log("rendered");
 
   useEffect(() => {
     const newFilteredMonsters = monsters.filter((monster) => {
