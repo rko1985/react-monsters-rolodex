@@ -1,21 +1,19 @@
+import { ChangeEventHandler } from 'react';
 
 import './search-box.styles.css'
 
-interface ISearchPoxProps {
+type SearchBoxProps = {
     className: string;
-    placeholder?: string;    
+    placeholder?: string;
+    onChangeHandler: ChangeEventHandler<HTMLInputElement>;
 }
 
-interface ISearchPoxProps {
-    onChangeHandler: (a: string) => void
-}
-
-const SearchBox = ({className, placeholder, onChangeHandler}: ISearchPoxProps) => (
+const SearchBox = ({className, placeholder, onChangeHandler}: SearchBoxProps) => (
     <input 
     className={`search-box ${className}`}
     type='search' 
     placeholder={placeholder}
-    onChange={(e) => onChangeHandler(e)}/>
+    onChange={onChangeHandler}/>
 );
 
 export default SearchBox;
